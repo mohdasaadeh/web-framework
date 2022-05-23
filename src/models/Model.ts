@@ -28,9 +28,9 @@ export class Model<T extends HasId> {
     private apiAsync: ApiAsync<T>
   ) {}
 
-  get get() {
-    return this.attributes.get;
-  }
+  get = this.attributes.get;
+  on = this.events.on;
+  trigger = this.events.trigger;
 
   set(updatedData: T): void {
     this.attributes.set(updatedData);
@@ -48,13 +48,5 @@ export class Model<T extends HasId> {
     const response: AxiosResponse = await this.apiAsync.store(data, url);
 
     this.set(response.data);
-  }
-
-  get on() {
-    return this.events.on;
-  }
-
-  get trigger() {
-    return this.events.trigger;
   }
 }

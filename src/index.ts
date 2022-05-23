@@ -1,10 +1,7 @@
 import { User } from "./models/User";
 
-const user = User.buildUser({ id: 1 });
+const userCollection = User.buildUserCollection("http://localhost:3000/users");
 
-user.on("change", () => console.log(user));
+userCollection.on("change", () => console.log(userCollection));
 
-user.store(
-  { id: 1, username: "Mohammad", age: 29 },
-  "http://localhost:3000/users"
-);
+userCollection.fetch();
