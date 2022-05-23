@@ -1,11 +1,10 @@
 import { User } from "./models/User";
 
-const user = new User({ id: 1, username: "Yazan" });
+const user = User.buildUser({ id: 1 });
 
-user.store();
+user.on("change", () => console.log(user));
 
-console.log(user.get("username"));
-
-user.fetch(1);
-
-setTimeout(() => console.log(user.get("username")), 5000);
+user.store(
+  { id: 1, username: "Mohammad", age: 29 },
+  "http://localhost:3000/users"
+);
