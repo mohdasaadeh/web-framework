@@ -3,17 +3,17 @@
     {
       "id": 1,
       "username": "Mohammad",
-      "age": 29
+      "age": 70
     },
     {
       "id": 2,
-      "username": "Malek",
-      "age": 13
+      "username": "Malek The Boss",
+      "age": 31
     },
     {
       "id": 3,
       "username": "Mahmoud",
-      "age": 23
+      "age": 16
     }
   ]
 }

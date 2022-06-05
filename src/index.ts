@@ -1,7 +1,14 @@
-import { User } from "./models/User";
+import { Collection } from "./models/Collection";
+import { User, UserData } from "./models/User";
+import { UserList } from "./models/UserList";
 
-const userCollection = User.buildUserCollection("http://localhost:3000/users");
+const root = document.querySelector("#root");
 
-userCollection.on("change", () => console.log(userCollection));
+const userCollection = new Collection<User, UserData>(
+  "http://localhost:3000/users",
+  (element) => User.buildUser(element)
+);
 
-userCollection.fetch();
+const userList = new UserList(root, userCollection);
+
+userList.render();

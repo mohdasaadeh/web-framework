@@ -4,7 +4,7 @@ import { ApiAsync } from "./ApiAsync";
 import { Attributes } from "./Attributes";
 import { Collection } from "./Collection";
 
-interface UserData {
+export interface UserData {
   id?: number;
   username?: string;
   age?: number;
