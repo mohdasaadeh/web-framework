@@ -1,4 +1,4 @@
-import { User } from "./User";
+import { User } from "../models/User";
 import { WebView } from "./WebView";
 
 export class UserShow extends WebView<User> {

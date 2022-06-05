@@ -1,6 +1,6 @@
 import { Collection } from "./models/Collection";
 import { User, UserData } from "./models/User";
-import { UserList } from "./models/UserList";
+import { UserList } from "./view/UserList";
 
 const root = document.querySelector("#root");
 

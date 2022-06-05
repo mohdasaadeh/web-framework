@@ -1,4 +1,4 @@
-import { Callback } from "./Eventing";
+import { Callback } from "../models/Eventing";
 
 interface HasOn {
   on: (type: string, callback: Callback) => void;

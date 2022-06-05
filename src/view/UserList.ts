@@ -1,5 +1,5 @@
-import { User } from "./User";
-import { UserData } from "./User";
+import { User } from "../models/User";
+import { UserData } from "../models/User";
 import { UserEdit } from "./UserEdit";
 import { ViewCollection } from "./ViewCollection";
 
